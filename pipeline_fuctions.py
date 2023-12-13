@@ -16,26 +16,28 @@ def data_to_graph(DATABASE):
     if DATABASE == 'BlogCatalog':
         G = nx.read_edgelist('Data/BlogCatalog/data/edges.csv', delimiter=",")
         G = nx.convert_node_labels_to_integers(G, first_label=0)
-        G.name = 'BlogCatalog'
 
     elif DATABASE == 'Cornell':
         dataset = CornellDataset()
-        g = dataset[0]
-        G = g.to_networkx().to_undirected()
+        G = dataset[0]
+        G = G.to_networkx().to_undirected()
 
     elif DATABASE == "CoraGraph":
         dataset = CoraGraphDataset()
-        g = dataset[0]
-        G = g.to_networkx().to_undirected()
+        G = dataset[0]
+        G = G.to_networkx().to_undirected()
 
     elif DATABASE == "Texas":
         dataset = TexasDataset()
-        g = dataset[0]
-        G = g.to_networkx().to_undirected()
+        G = dataset[0]
+        G = G.to_networkx().to_undirected()
     elif DATABASE == "KarateClub":
         dataset = KarateClubDataset()
-        g = dataset[0]
-        G = g.to_networkx().to_undirected()
+        G = dataset[0]
+        G = G.to_networkx().to_undirected()
+    else:
+        raise ValueError("Invalid database name!")
+    G.name = DATABASE
         
     return G
 
