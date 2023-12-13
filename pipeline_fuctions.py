@@ -6,6 +6,7 @@ import os
 # from grarep import GraRep
 from karateclub.node_embedding.neighbourhood import GraRep
 import json
+from dgl.data import CornellDataset,CoraGraphDataset, TexasDataset, KarateClubDataset
 
 def data_to_graph(DATABASE):
     """
@@ -16,33 +17,26 @@ def data_to_graph(DATABASE):
         G = nx.read_edgelist('Data/BlogCatalog/data/edges.csv', delimiter=",")
         G = nx.convert_node_labels_to_integers(G, first_label=0)
         G.name = 'BlogCatalog'
-    elif DATABASE == 'DBLP':
-        with open('Data/DBLP/com-dblp.ungraph.txt', 'r') as file:
-            lines = file.readlines()[4:]
-        G = nx.parse_edgelist(lines, delimiter="\t")
-        G = nx.convert_node_labels_to_integers(G, first_label=0)
-        G = G.subgraph(max(nx.connected_components(G), key=len)).copy()
-        G.name = 'DBLP'
-    elif DATABASE == "deezer_ego_nets":
-        file_path = 'Data/deezer_ego_nets/deezer_edges.json'
-        with open(file_path, 'r') as file:
-            data = json.load(file)
-        G = nx.Graph()
-        for key in data:
-            for edge in data[key]:
-                G.add_edge(*edge) 
-    elif DATABASE == "YouTube":
-        with open('Data/YouTube/com-youtube.ungraph.txt', 'r') as file:
-            lines = file.readlines()[4:]
-        G = nx.parse_edgelist(lines, delimiter="\t")
-        G = nx.convert_node_labels_to_integers(G, first_label=0)
-        G.name = 'YouTube'
-    elif DATABASE == "Eu-core":
-        with open('Data/Eu-core/email-Eu-core.txt', 'r') as file:
-            lines = file.readlines()
-        G = nx.parse_edgelist(lines, delimiter=" ")
-        G = nx.convert_node_labels_to_integers(G, first_label=0)
-        G.name = 'Eu-core'
+
+    elif DATABASE == 'Cornell':
+        dataset = CornellDataset()
+        g = dataset[0]
+        G = g.to_networkx().to_undirected()
+
+    elif DATABASE == "CoraGraph":
+        dataset = CoraGraphDataset()
+        g = dataset[0]
+        G = g.to_networkx().to_undirected()
+
+    elif DATABASE == "Texas":
+        dataset = TexasDataset()
+        g = dataset[0]
+        G = g.to_networkx().to_undirected()
+    elif DATABASE == "KarateClub":
+        dataset = KarateClubDataset()
+        g = dataset[0]
+        G = g.to_networkx().to_undirected()
+        
     return G
 
 
@@ -61,7 +55,7 @@ def graph_to_representations(graph, k_list, database):
         Embeddings[f'{k}'] = embedding
         print(f"----------Finished reps for k-step:{k}")
 
-    file_name = f"Data/{database}/embeddings.npy"
+    file_name = f"Data/{database}/embeddings"
     np.savez(file_name, **Embeddings)
 
     return

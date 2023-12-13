@@ -173,10 +173,10 @@ class GraRep(Estimator):
         embeddings = np.concatenate(embeddings, axis=1)
         return embeddings
 
-if __name__ == "__main__":
-    # test with random graph
-    graph = nx.fast_gnp_random_graph(5000, 0.05)
-    graph.name = 'test'
-    grarep = GraRep(order=5, dimensions=2)
-    grarep.fit(graph)
-    embedding = grarep.get_embedding()
+# if __name__ == "__main__":
+#     # test with random graph
+#     graph = nx.fast_gnp_random_graph(5000, 0.05)
+#     graph.name = 'test'
+#     grarep = GraRep(order=5, dimensions=2)
+#     grarep.fit(graph)
+#     embedding = grarep.get_embedding()
