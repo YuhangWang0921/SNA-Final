@@ -18,7 +18,7 @@ def node_classification_eva(node_reps, node_labels):
     for hp, representations in node_reps.items():
         # Split the dataset into training and testing sets
         print(f"Hyperparameter: {hp}, Representations length: {len(representations)}, Labels length: {len(node_labels)}")
-        # 确保长度相同
+        # make sure length is equal
         if len(representations) != len(node_labels):
             raise ValueError(f"Length mismatch for hyperparameter {hp}: {len(representations)} representations vs {len(node_labels)} labels")
         X_train, X_test, y_train, y_test = train_test_split(representations, node_labels, test_size=0.3, random_state=42)
@@ -39,7 +39,7 @@ def node_classification_eva(node_reps, node_labels):
         # Store the performance scores
         performance_scores[hp] = {'Micro F1': micro_f1, 'Macro F1': macro_f1}
     print(f"Performance as follows:{performance_scores}")
-    # 计算 Micro F1 和 Macro F1 的平均值
+    # calculate the average of Micro F1  Macro F1 
     total_micro_f1 = sum(score['Micro F1'] for score in performance_scores.values())
     total_macro_f1 = sum(score['Macro F1'] for score in performance_scores.values())
 
