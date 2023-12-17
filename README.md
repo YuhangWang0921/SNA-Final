@@ -29,7 +29,8 @@ To use this project, follow these steps:
 
 
 ## Contact
-- wyh5699@gmail.com
+- Yuhang Wang:  wyh5699@gmail.com
+- Ruben Ahrens: s3677532@vuw.leidenuniv.nl
 
 
 
