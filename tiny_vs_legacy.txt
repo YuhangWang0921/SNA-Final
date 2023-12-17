@@ -1,0 +1,184 @@
+----------Using KarateClub----------
+----------Using tiny_grarep----------
+----------Generating reps for k-step:1----------
+memory_usage: 0.459 MB
+Time: 0.001 minutes
+----------Generating reps for k-step:2----------
+memory_usage: 0.35 MB
+Time: 0.002 minutes
+----------Generating reps for k-step:5----------
+memory_usage: 0.382 MB
+Time: 0.004 minutes
+----------Generating reps for k-step:6----------
+memory_usage: 0.39 MB
+Time: 0.006 minutes
+----------Generating reps for k-step:7----------
+C:\Users\Ruben\miniconda3\envs\snacs\lib\site-packages\sklearn\decomposition\_truncated_svd.py:273: RuntimeWarning: invalid value encountered in divide
+  self.explained_variance_ratio_ = exp_var / full_var
+memory_usage: 0.377 MB
+Time: 0.009 minutes
+----------Using legacy_grarep----------
+----------Generating reps for k-step:1----------
+memory_usage: 0.097 MB
+Time: 0.0 minutes
+----------Generating reps for k-step:2----------
+memory_usage: 0.098 MB
+Time: 0.001 minutes
+----------Generating reps for k-step:5----------
+memory_usage: 0.124 MB
+Time: 0.002 minutes
+----------Generating reps for k-step:6----------
+memory_usage: 0.128 MB
+Time: 0.003 minutes
+----------Generating reps for k-step:7----------
+memory_usage: 0.136 MB
+Time: 0.004 minutes
+----------Using Texas----------
+Downloading C:\Users\Ruben\.dgl\texas.zip from https://data.dgl.ai/dataset/texas.zip...
+Extracting file to C:\Users\Ruben\.dgl\texas_205d1148
+Done saving data into cached files.
+----------Using tiny_grarep----------
+----------Generating reps for k-step:1----------
+memory_usage: 0.494 MB
+Time: 0.001 minutes
+----------Generating reps for k-step:2----------
+memory_usage: 0.74 MB
+Time: 0.002 minutes
+----------Generating reps for k-step:5----------
+memory_usage: 0.847 MB
+Time: 0.005 minutes
+----------Generating reps for k-step:6----------
+memory_usage: 0.706 MB
+Time: 0.009 minutes
+----------Generating reps for k-step:7----------
+memory_usage: 0.694 MB
+Time: 0.013 minutes
+----------Using legacy_grarep----------
+----------Generating reps for k-step:1----------
+memory_usage: 0.684 MB
+Time: 0.0 minutes
+----------Generating reps for k-step:2----------
+memory_usage: 1.134 MB
+Time: 0.001 minutes
+----------Generating reps for k-step:5----------
+memory_usage: 2.047 MB
+Time: 0.004 minutes
+----------Generating reps for k-step:6----------
+memory_usage: 2.073 MB
+Time: 0.007 minutes
+----------Generating reps for k-step:7----------
+memory_usage: 2.112 MB
+Time: 0.011 minutes
+----------Using CoraGraph----------
+Downloading C:\Users\Ruben\.dgl\cora_v2.zip from https://data.dgl.ai/dataset/cora_v2.zip...
+Extracting file to C:\Users\Ruben\.dgl\cora_v2_d697a464
+Finished data loading and preprocessing.
+  NumNodes: 2708
+  NumEdges: 10556
+  NumFeats: 1433
+  NumClasses: 7
+  NumTrainingSamples: 140
+  NumValidationSamples: 500
+  NumTestSamples: 1000
+Done saving data into cached files.
+----------Using tiny_grarep----------
+----------Generating reps for k-step:1----------
+memory_usage: 4.077 MB
+Time: 0.005 minutes
+----------Generating reps for k-step:2----------
+memory_usage: 7.039 MB
+Time: 0.013 minutes
+----------Generating reps for k-step:5----------
+memory_usage: 11.541 MB
+Time: 0.031 minutes
+----------Generating reps for k-step:6----------
+memory_usage: 10.855 MB
+Time: 0.047 minutes
+----------Generating reps for k-step:7----------
+memory_usage: 9.953 MB
+Time: 0.063 minutes
+----------Using legacy_grarep----------
+----------Generating reps for k-step:1----------
+memory_usage: 8.302 MB
+Time: 0.004 minutes
+----------Generating reps for k-step:2----------
+memory_usage: 15.601 MB
+Time: 0.012 minutes
+----------Generating reps for k-step:5----------
+memory_usage: 170.039 MB
+Time: 0.07 minutes
+----------Generating reps for k-step:6----------
+memory_usage: 241.612 MB
+Time: 0.163 minutes
+----------Generating reps for k-step:7----------
+memory_usage: 292.957 MB
+Time: 0.296 minutes
+----------Using Cornell----------
+Downloading C:\Users\Ruben\.dgl\cornell.zip from https://data.dgl.ai/dataset/cornell.zip...
+Extracting file to C:\Users\Ruben\.dgl\cornell_90c4aadb
+Done saving data into cached files.
+----------Using tiny_grarep----------
+----------Generating reps for k-step:1----------
+memory_usage: 0.475 MB
+Time: 0.001 minutes
+----------Generating reps for k-step:2----------
+memory_usage: 0.66 MB
+Time: 0.002 minutes
+----------Generating reps for k-step:5----------
+memory_usage: 0.795 MB
+Time: 0.005 minutes
+----------Generating reps for k-step:6----------
+memory_usage: 0.634 MB
+Time: 0.008 minutes
+----------Generating reps for k-step:7----------
+memory_usage: 0.636 MB
+Time: 0.012 minutes
+----------Using legacy_grarep----------
+----------Generating reps for k-step:1----------
+memory_usage: 0.617 MB
+Time: 0.001 minutes
+----------Generating reps for k-step:2----------
+memory_usage: 1.024 MB
+Time: 0.001 minutes
+----------Generating reps for k-step:5----------
+memory_usage: 2.027 MB
+Time: 0.004 minutes
+----------Generating reps for k-step:6----------
+memory_usage: 2.062 MB
+Time: 0.007 minutes
+----------Generating reps for k-step:7----------
+memory_usage: 2.092 MB
+Time: 0.01 minutes
+----------Using BlogCatalog----------
+----------Using tiny_grarep----------
+----------Generating reps for k-step:1----------
+memory_usage: 643.318 MB
+Time: 0.328 minutes
+----------Generating reps for k-step:2----------
+memory_usage: 1121.173 MB
+Time: 1.026 minutes
+----------Generating reps for k-step:5----------
+memory_usage: 1121.173 MB
+Time: 2.45 minutes
+----------Generating reps for k-step:6----------
+memory_usage: 1121.173 MB
+Time: 4.013 minutes
+----------Generating reps for k-step:7----------
+memory_usage: 1121.173 MB
+Time: 5.512 minutes
+----------Using legacy_grarep----------
+----------Generating reps for k-step:1----------
+memory_usage: 2571.78 MB
+Time: 0.433 minutes
+----------Generating reps for k-step:2----------
+memory_usage: 4988.496 MB
+Time: 1.705 minutes
+----------Generating reps for k-step:5----------
+memory_usage: 6097.801 MB
+Time: 6.306 minutes
+----------Generating reps for k-step:6----------
+memory_usage: 6099.062 MB
+Time: 11.459 minutes
+----------Generating reps for k-step:7----------
+memory_usage: 6100.325 MB
+Time: 17.495 minutes

@@ -115,7 +115,6 @@ class GraRep(Estimator):
         del _A_hat
         
         _A_tilde = self.threshold(_A_tilde, threshold=1e-4, minmax="floor")
-        # print(f"Size of A^{k} in kB: {_A_tilde.data.nbytes/1024}")
         self._save_matrix(_A_tilde, f"A^{k}")
             
         # _A_tile acts as the target matrix from now on
@@ -172,11 +171,3 @@ class GraRep(Estimator):
             embeddings.append(embedding)
         embeddings = np.concatenate(embeddings, axis=1)
         return embeddings
-
-if __name__ == "__main__":
-    # test with random graph
-    graph = nx.fast_gnp_random_graph(5000, 0.05)
-    graph.name = 'test'
-    grarep = GraRep(order=5, dimensions=2)
-    grarep.fit(graph)
-    embedding = grarep.get_embedding()
