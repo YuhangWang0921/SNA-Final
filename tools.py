@@ -107,7 +107,9 @@ def eva_udr(Datasets):
 
     
     for dataset in Datasets:
-            ## Load and eva Reps
+        # To store results
+        output = []
+        ## Load and eva Reps
         BC_embeddings = load_embeddings(dataset)
         # BC_embeddings = load_representations(dataset, k_list)
         BC_embeddings = dict(BC_embeddings)
@@ -135,3 +137,12 @@ def eva_udr(Datasets):
         print(f"Baseline Micro F1 is{avg_micro_f1}")
         print(f"Baseline Macro F1 is{avg_macro_f1}")
         print(f"Performaces for each k are:{eva_scores}")
+
+        output.append(f"The keys in BC_embeddings{BC_embeddings.keys()}\n")
+        output.append(f"ranked list is:{ranked_list}\n")
+        output.append(f"Baseline Micro F1 is{avg_micro_f1}\n")
+        output.append(f"Baseline Macro F1 is{avg_macro_f1}\n")
+        output.append(f"Performances for each k are:{eva_scores}\n")
+
+        with open(f"tiny_{dataset}_evaluation_results.txt", "w") as file:
+            file.writelines(output)

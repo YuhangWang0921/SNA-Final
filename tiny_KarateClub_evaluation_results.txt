@@ -1,0 +1,5 @@
+The keys in BC_embeddingsdict_keys(['1', '2', '5', '6', '7'])
+ranked list is:{'2': 1, '1': 2, '5': 3, '7': 4, '6': 5}
+Baseline Micro F1 is0.9636363636363636
+Baseline Macro F1 is0.9623931623931623
+Performances for each k are:{'1': {'Micro F1': 0.9090909090909091, 'Macro F1': 0.905982905982906}, '2': {'Micro F1': 0.9090909090909091, 'Macro F1': 0.905982905982906}, '5': {'Micro F1': 1.0, 'Macro F1': 1.0}, '6': {'Micro F1': 1.0, 'Macro F1': 1.0}, '7': {'Micro F1': 1.0, 'Macro F1': 1.0}}

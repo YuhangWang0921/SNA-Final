@@ -1,10 +1,10 @@
 import networkx as nx
 import numpy as np
 from scipy.stats import kendalltau
-# from tiny_grarep import GraRep
+from tiny_grarep import GraRep as TinyGraRep
 import os
-# from grarep import GraRep
-from karateclub.node_embedding.neighbourhood import GraRep
+from grarep import GraRep as GraRep
+# from karateclub.node_embedding.neighbourhood import GraRep
 import json
 from dgl.data import CornellDataset,CoraGraphDataset, TexasDataset, KarateClubDataset
 
@@ -36,11 +36,11 @@ def data_to_graph(DATABASE):
         dataset = KarateClubDataset()
         g = dataset[0]
         G = g.to_networkx().to_undirected()
-        
+
     return G
 
 
-def graph_to_representations(graph, k_list, database):
+def graph_to_representations(graph, k_list, database, GraRep_type = 'GraRep'):
     """
     Generate representations(k) based on graphs and different hp: k
     Input: graph data and candidate k list
@@ -49,7 +49,10 @@ def graph_to_representations(graph, k_list, database):
     Embeddings = {}
     for k in k_list:
         print(f"----------Generating reps for k-step:{k}")
-        grarep = GraRep(order=k, dimensions=16)
+        if GraRep_type == 'GraRep':
+            grarep = GraRep(order=k, dimensions=16)
+        else:
+            grarep = TinyGraRep(order=k, dimensions=16)
         grarep.fit(graph)
         embedding = grarep.get_embedding()
         Embeddings[f'{k}'] = embedding
