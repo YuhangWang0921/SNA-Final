@@ -1,4 +1,4 @@
-# Project Title
+# Evolving GraRep: Unsupervised Learning Adaptation and Memory Efficient Design with UDR-GraRep and Tiny-GraRep
 
 ## Overview
 This project implements the UDR-GraRep and Tiny-GraRep algorithms for graph representation learning. The codebase includes scripts to generate representations and evaluate their performance.
