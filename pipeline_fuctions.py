@@ -2,10 +2,7 @@ import networkx as nx
 import numpy as np
 from scipy.stats import kendalltau
 from tiny_grarep import GraRep as TinyGraRep
-import os
-from grarep import GraRep as GraRep
-# from karateclub.node_embedding.neighbourhood import GraRep
-import json
+from legacy_grarep import GraRep
 from dgl.data import CornellDataset,CoraGraphDataset, TexasDataset, KarateClubDataset
 
 def data_to_graph(DATABASE):

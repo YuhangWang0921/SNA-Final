@@ -38,10 +38,7 @@ for dataset in datasets:
             del end
             
             if grarep.__name__ == "tiny_grarep":
-                # delete all files in the Data/<database>/tmp folder (windows)
                 folder = f"Data/{dataset}/tmp"
                 for filename in os.listdir(folder):
                     file_path = os.path.join(folder, filename)
                     os.remove(file_path)
-            # if grarep.__name__ == "legacy_grarep":
-            #     start = time.time()

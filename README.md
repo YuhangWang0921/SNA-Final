@@ -26,6 +26,10 @@ To use this project, follow these steps:
      ```
      python3 Experiment.py
      ```
+   - For the TinyGraRep speed and memory size study, execute `tiny_vs_legacy.py`. Make sure the embeddings and tmp folders are empty or deleted for all datasets.
+     ```
+     python3 tiny_vs_legacy.py
+     ```
 
 
 ## Contact

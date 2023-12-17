@@ -5,7 +5,6 @@ from scipy import sparse
 from sklearn.decomposition import TruncatedSVD
 from karateclub.estimator import Estimator
 import os
-import sys
 
 class GraRep(Estimator):
     r"""An implementation of `"GraRep" <https://dl.acm.org/citation.cfm?id=2806512>`_
